@@ -56,7 +56,7 @@ app.use('/api/conversation',conversationRoutes)
 app.use('/api/message',MessageRoutes)
 
 
-app.get("/", (_, res) => {
+app.get("*", (_, res) => {
     res.sendFile(path.resolve(_dirname, 'frontend', 'dist', 'index.html'));
 });
 
